@@ -1,0 +1,56 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Databases (Firebase)</title>
+    <style>
+      .container {
+        max-width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container my-5">
+      <h2>Recipes</h2>
+      <ul></ul>
+      <form>
+        <label for="recipe">Add a new recipe:</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="recipe" required />
+          <div class="input-group-append">
+            <input
+              type="submit"
+              value="add"
+              class="btn btn-outline-secondary"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+    <script>
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyAgJ4e8yf65itWZo_brvXjrALVOAW7kkF4",
+        authDomain: "fir-database-8b172.firebaseapp.com",
+        projectId: "fir-database-8b172",
+        storageBucket: "fir-database-8b172.appspot.com",
+        messagingSenderId: "1060165231553",
+        appId: "1:1060165231553:web:1bfa2ff13f23fc582a8540",
+        measurementId: "G-DTBBPGNY78",
+      };
+      firebase.initializeApp(config); //starts our connection with the backend.
+      const db = firebase.firestore(); //initializing the firestore connection
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
